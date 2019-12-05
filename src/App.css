@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     padding: 50px;
+    flex-direction: column;
 }
 
 .img {
@@ -22,6 +23,8 @@
 
 .imgContainer {
     position: relative;
+    background-color: #000;
+    border-radius: 8px;
 }
 
 .rightArrow, .leftArrow {
@@ -67,4 +70,21 @@
 .fader.hide {
     opacity: 0;
     transition: 0.5s opacity;
+}
+
+.toggleBtn {
+    border-radius: 1000px;
+    padding: 30px;
+    background-color: #ddd;
+    margin: 50px;
+    cursor: pointer;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleBtn:hover {
+    background-color: #ccc;
+    opacity: 1;
 }
