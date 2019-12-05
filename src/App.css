@@ -1,22 +1,70 @@
+:root {
+    --width: 800px;
+    --height: 500px;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
+.img {
+    width: var(--width);
+    height: var(--height);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    flex-shrink: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.imgContainer {
+    position: relative;
 }
 
-.App-link {
-  color: #09d3ac;
+.rightArrow, .leftArrow {
+    background-color: rgba(0, 0, 0, .8);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #ddd;
+}
+
+.rightArrow:hover, .leftArrow:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.rightArrow {
+    left: calc(100% - 30px);
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+}
+
+.leftArrow {
+    right: calc(100% - 30px);
+    border-top-left-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+}
+
+.fader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.fader.hide {
+    opacity: 0;
+    transition: 0.5s opacity;
 }
